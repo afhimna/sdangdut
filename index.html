@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundCloud Playlist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #181818;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .playlist-container {
+            max-width: 1000px;
+            margin: auto;
+            background: #242424;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .playlist-container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #f50;
+            animation: pulse 1.5s infinite alternate;
+        }
+        @keyframes pulse {
+            from { opacity: 0.7; }
+            to { opacity: 1; }
+        }
+        .soundcloud-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        iframe {
+            width: 100%;
+            height: 120px;
+            border-radius: 10px;
+            background-color: #333;
+            transition: transform 0.3s;
+        }
+        iframe:hover {
+            transform: scale(1.05);
+        }
+        .description {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #bbb;
+        }
+        @media (max-width: 600px) {
+            .soundcloud-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="playlist-container">
+        <h1>Dangdut</h1>
+        <p class="description">Galau?</p>
+        <div class="soundcloud-grid">
+            <iframe scrolling="no" frameborder="no" allow="autoplay" 
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/happyasmara/ego&color=%23242424"></iframe>
+            
+            <iframe scrolling="no" frameborder="no" allow="autoplay" 
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/yudi-petir-268848278/happy-asmara-cerito-loro&color=%23242424"></iframe>
+            
+            <iframe scrolling="no" frameborder="no" allow="autoplay" 
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/kafina-282407020/sigar&color=%23242424"></iframe>
+            
+            <iframe scrolling="no" frameborder="no" allow="autoplay" 
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/kafina-282407020/nexarrr&color=%23242424"></iframe>
+        </div>
+    </div>
+</body>
+</html>
